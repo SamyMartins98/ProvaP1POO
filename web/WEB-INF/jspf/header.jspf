@@ -10,19 +10,19 @@
     }
 %>
 
-<%if(session.getAttribute("session.username")!=null){%>
+<%if(session.getAttribute("session.name")!=null){%>
     <form>
         <h4>Samanta Costa Martins de Oliveira</h4>
         <hr>
         Bem vindo, <%= session.getAttribute("session.name") %>
         <input type="submit" name="session.logout" value="Sair"/> |
         <a href="index.jsp">Início</a> |
-        <a href="page1.jsp">Disciplinas</a>
+        <a href="disciplinas.jsp">Disciplinas</a>
     </form>
 <%}else{%>
     <form>
         <h4>Samanta Costa Martins de Oliveira</h4>
-        Username: <input type="text" name="session.name"/>
+        Nome: <input type="text" name="session.name"/>
         <input type="submit" name="session.login" value="Entrar"/>
     </form>
 <%}%>
